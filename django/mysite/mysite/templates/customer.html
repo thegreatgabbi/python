@@ -1,0 +1,21 @@
+<html><body>
+<h1>Customer Information</h1>
+<table border="1" style="solid">
+<tr>
+   <td> Customer  id </td>
+   <td> {{ customer.cid }} </td>
+</tr>
+<tr>
+   <td> Name  </td>
+   <td> {{ customer.name }} </td>
+</tr>
+<tr>
+   <td> Products </td>
+   <td>
+   {% for p in customer.products.all %}
+      {{ p.description }} <br/>
+   {% endfor %}
+   </td>
+</tr>
+</table>
+</body></html>

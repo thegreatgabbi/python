@@ -1,0 +1,12 @@
+<html><body>
+<h1>Customers</h1>
+<ul>
+{% for c in customers %}
+   <li>
+      <a href="customer/{{ c.cid }}"> {{ c.name }} </a>
+          [ <a href="editcust/{{ c.cid }}">edit</a> ]
+   </li>
+{% endfor %}
+</ul>
+<a href="addcust">Add customer</a>
+</body></html>
